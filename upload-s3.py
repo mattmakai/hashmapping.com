@@ -4,6 +4,21 @@ import os
 
 OUTPUT_DIR = '/s3site'
 
+def upload_with_content_type(file, full_key, auto):
+    if ".html" in file:
+        print("uploading \"{}\" as html".format(full_key))
+        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
+                          ContentType="text/html")
+    elif ".css" in file:
+        print("uploading \"{}\" as css".format(full_key))
+        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
+                          ContentType="text/css")
+    else:
+        print("uploading \"{}\"".format(full_key))
+        bucket.put_object(Key=full_key, Body=auto,
+                          ACL='public-read')
+
+
 if __name__ == "__main__":
     s3 = boto3.resource('s3')
     bucket = s3.Bucket('www.hashmapping.com')
@@ -16,5 +31,6 @@ if __name__ == "__main__":
                 full_key = file
                 if subdir:
                     full_key = subdir + '/' + file
-                print("uploading \"{}\"".format(full_key))
-                bucket.put_object(Key=full_key, Body=auto)
+                upload_with_content_type(file, full_key, auto)
+
+
