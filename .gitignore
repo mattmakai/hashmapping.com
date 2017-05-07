@@ -35,4 +35,5 @@ pip-log.txt
 source/cache/
 venv
 
-s3site/
+generated/
+.env
