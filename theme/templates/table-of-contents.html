@@ -8,49 +8,58 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-8">
-        <h1>Table of Contents</h1>
-        <div class="row">
-            <div class="col-md-6">
-              <div class="list-group">
-                    <h3>1. <a href="/introduction.html">Introduction</a></h3>
-                    <h4 class="toc-subsection">1.1 <a href="#">Programming Cultures</a></h4>
-                    <div><a href="#" class="subsection">Python</a></div>
-                    <div><a href="#" class="subsection">Ruby</a></div>
-                    <div><a href="#" class="subsection">Java</a></div>
+<div class="col-md-12">
+<h1>Table of Contents</h1>
+<div class="row">
+<div class="col-md-4">
+<div class="list-group">
+ <h3>1. <a href="/introduction.html">Introduction</a></h3>
+  <h4 class="toc-subsection">1.1 <a href="#">Programming Cultures</a></h4>
+  <div><a href="#" class="subsection">Python</a></div>
+  <div><a href="#" class="subsection">Ruby</a></div>
+  <div><a href="#" class="subsection">Java</a></div>
 
-                    <h4 class="toc-subsection">1.2 </h4>
-                    <div><a href="#" class="subsection">Modeling</a></div>
-                    <div><a href="#" class="subsection">Tools</a></div>
+  <h4 class="toc-subsection">1.2 </h4>
+  <div><a href="#" class="subsection">Modeling</a></div>
+  <div><a href="#" class="subsection">Tools</a></div>
 
-              </div>
-            </div>
+</div>
+</div>
 
-            <div class="col-md-6">
-              <div class="list-group">
-                    <h3>2. <a href="#">Management</a></h3>
-                    <h4 class="toc-subsection">2.1 <a href="#">Developers</a></h4>
-                    <div><a href="#" class="subsection">Sprints</a></div>
+<div class="col-md-4">
+<div class="list-group">
+<h3>2. <a href="#">Management</a></h3>
+<h4 class="toc-subsection">2.1 <a href="#">Developers</a></h4>
+<div><a href="#" class="subsection">Sprints</a></div>
 
 
-                    <h3>3. Meta</h3>
-                    <div class="toc-more-indent">
-                        <a href="/change-log.html">Change log</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% include "sidebar.html" %}
+<h3>3. <a href="#">Marketing to Developers</a></h3>
+<h4 class="toc-subsection">2.1 <span class="soon">Developer events</span></h4>
+<div class="toc soon">Hackathons</div>
+<div class="toc soon">Meetups</div>
+
+<h4 class="toc-subsection">2.1 <span class="soon">Content</span></h4>
+<div class="toc soon">Documentation</div>
+
+
+<h3>12. Meta</h3>
+<div class="toc-more-indent">
+<a href="/change-log.html">Change log</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% include "sidebar.html" %}
 </div>
 <!--
 <div class="row">
-    <div class="col-md-12">
-        <h2><a href="/blog.html">Blog Posts</a></h2>
-        {% for a in articles %}
-            <h4 style="padding-bottom: 6px; line-height: 1.25em;"><a href="/blog/{{ a.slug }}.html">{{ a.title }}</a></h4>
-        {% endfor %}
-    </div>
+<div class="col-md-12">
+<h2><a href="/blog.html">Blog Posts</a></h2>
+{% for a in articles %}
+<h4 style="padding-bottom: 6px; line-height: 1.25em;"><a href="/blog/{{ a.slug }}.html">{{ a.title }}</a></h4>
+{% endfor %}
+</div>
 </div>
 -->
 {% endblock %}

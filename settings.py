@@ -17,7 +17,7 @@ SITEMAP_SAVE_AS = 'sitemap.xml'
 FEED_DOMAIN = 'http://www.hashmapping.com'
 FEED_RSS = 'feed'
 
-BYLINE = '&copy; 2016 Matt Makai. All Rights Reserved.'
+BYLINE = '&copy; 2017 Matt Makai. All Rights Reserved.'
 LINKS = ()
 
 MARKUP = ('rst', 'markdown',)

@@ -19,6 +19,5 @@ conversations.
 
 This guide branches out on topic because your learning requirements 
 depend on what you're working on. Select one of the buttons below or 
-check out the full table of contents. 
-
+check out the [full table of contents](/table-of-contents.html). 
 
